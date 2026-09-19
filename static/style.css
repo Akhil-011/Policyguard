@@ -1,0 +1,405 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: #f4f6f8;
+    color: #172033;
+}
+
+.container {
+    width: min(900px, 92%);
+    margin: 45px auto 70px;
+}
+
+
+/* -------------------------
+   Header
+------------------------- */
+
+.hero {
+    margin-bottom: 28px;
+}
+
+.hero h1 {
+    margin: 0;
+
+    font-size: 30px;
+    letter-spacing: -0.7px;
+}
+
+.hero p {
+    margin: 5px 0 0;
+
+    color: #6b7280;
+    font-size: 15px;
+}
+
+.intro {
+    max-width: 720px;
+
+    margin-top: 16px;
+
+    color: #5f6877;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* -------------------------
+   Cards
+------------------------- */
+
+.card {
+    background: white;
+
+    padding: 25px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+
+/* -------------------------
+   Question
+------------------------- */
+
+.question-card > label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+textarea {
+    width: 100%;
+
+    min-height: 115px;
+
+    padding: 14px;
+
+    border: 1px solid #d6dae1;
+    border-radius: 9px;
+
+    background: #fbfcfd;
+
+    color: #172033;
+
+    resize: vertical;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+}
+
+textarea:focus {
+    border-color: #8b95a5;
+
+    box-shadow:
+        0 0 0 3px rgba(23, 32, 51, 0.07);
+}
+
+
+/* -------------------------
+   Demo checkbox
+------------------------- */
+
+.demo {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    margin: 15px 0 18px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.demo input {
+    margin: 0;
+}
+
+
+/* -------------------------
+   Button
+------------------------- */
+
+button {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 10px;
+
+    border: none;
+    border-radius: 9px;
+
+    padding: 12px 19px;
+
+    background: #172033;
+    color: white;
+
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+
+/* -------------------------
+   Loading
+------------------------- */
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 13px;
+
+    padding: 20px;
+
+    margin-bottom: 18px;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    color: #4b5563;
+}
+
+.loading p {
+    margin: 3px 0 0;
+
+    font-size: 12px;
+
+    color: #8a93a1;
+}
+
+.spinner {
+    width: 22px;
+    height: 22px;
+
+    border: 3px solid #e5e7eb;
+    border-top-color: #172033;
+
+    border-radius: 50%;
+
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* -------------------------
+   Section headings
+------------------------- */
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 16px;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    font-size: 19px;
+}
+
+
+/* -------------------------
+   Badges
+------------------------- */
+
+.pass-badge,
+.verify-badge,
+.result-badge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+.pass-badge {
+    background: #f1f3f5;
+    color: #5d6673;
+}
+
+.verify-badge {
+    background: #f1f3f5;
+    color: #5d6673;
+}
+
+.result-badge {
+    background: #eef1f5;
+    color: #4b5563;
+}
+
+
+/* -------------------------
+   Answers
+------------------------- */
+
+.answer {
+    line-height: 1.7;
+
+    color: #374151;
+
+    white-space: pre-wrap;
+}
+
+.final-answer {
+    font-size: 16px;
+    font-weight: 600;
+
+    color: #172033;
+}
+
+
+/* -------------------------
+   Verification checks
+------------------------- */
+
+.check {
+    margin-bottom: 12px;
+
+    padding: 15px 17px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+    border-left: 4px solid #9aa3af;
+
+    border-radius: 8px;
+}
+
+.check:last-child {
+    margin-bottom: 0;
+}
+
+.check p {
+    margin: 6px 0;
+
+    color: #4b5563;
+
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.check strong {
+    color: #202938;
+}
+
+
+/* -------------------------
+   Final result
+------------------------- */
+
+.final {
+    border: 1px solid #d9dde3;
+}
+
+#status {
+    margin-top: 18px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid #e5e7eb;
+
+    color: #5f6877;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.result-corrected {
+    background: #fff7e8;
+    color: #8a5a00;
+}
+
+.result-passed {
+    background: #edf8f1;
+    color: #287544;
+}
+
+.result-flagged {
+    background: #fff0f0;
+    color: #9b3030;
+}
+
+
+/* -------------------------
+   Utility
+------------------------- */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* -------------------------
+   Mobile
+------------------------- */
+
+@media (max-width: 650px) {
+
+    .container {
+        width: 94%;
+        margin-top: 25px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+    }
+
+}

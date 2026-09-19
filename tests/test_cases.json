@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "question": "What is the hotel reimbursement limit for domestic travel?",
+    "mode": "normal",
+    "purpose": "Verify a directly supported factual claim",
+    "result": "PASSED"
+  },
+  {
+    "id": 2,
+    "question": "How many days do employees have to submit a travel expense claim?",
+    "mode": "normal",
+    "purpose": "Verify a policy deadline",
+    "result": "PASSED"
+  },
+  {
+    "id": 3,
+    "question": "Is business-class airfare reimbursable for domestic travel?",
+    "mode": "normal",
+    "purpose": "Verify a policy restriction",
+    "result": "PASSED"
+  },
+  {
+    "id": 4,
+    "question": "What is the meal allowance and what supporting document is required?",
+    "mode": "normal",
+    "purpose": "Verify multiple factual claims in one answer",
+    "result": "PASSED"
+  },
+  {
+    "id": 5,
+    "question": "What is the hotel reimbursement limit for domestic travel?",
+    "mode": "confident-wrong-demo",
+    "purpose": "Verify that the checker catches a plausible incorrect amount",
+    "result": "CORRECTED"
+  },
+  {
+    "id": 6,
+    "question": "What is the maximum taxi reimbursement allowed under the policy?",
+    "mode": "normal",
+    "purpose": "Check whether the system avoids inventing information absent from the policy",
+    "result": "FLAGGED"
+  }
+]

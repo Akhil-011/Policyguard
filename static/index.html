@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PolicyGuard — Self-Checking AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="hero">
+
+            <h1>PolicyGuard</h1>
+
+            <p>
+                A self-checking AI assistant for policy questions.
+            </p>
+
+            <div class="intro">
+                PolicyGuard generates an answer, verifies its factual claims
+                against the source policy, and corrects unsupported information
+                before returning the result.
+            </div>
+
+        </header>
+
+
+        <!-- Question -->
+
+        <section class="card question-card">
+
+            <label for="question">
+                Ask a question about the travel policy
+            </label>
+
+            <textarea
+                id="question"
+                placeholder="Example: What is the hotel reimbursement limit for domestic travel?"
+            ></textarea>
+
+            <label class="demo">
+                <input type="checkbox" id="demoFailure">
+                Demonstrate confident-wrong case
+            </label>
+
+            <button id="checkButton" onclick="checkAnswer()">
+                Check Answer
+                <span>→</span>
+            </button>
+
+        </section>
+
+
+        <!-- Loading -->
+
+        <section id="loading" class="loading hidden">
+
+            <div class="spinner"></div>
+
+            <div>
+                <strong>Checking answer...</strong>
+                <p>Generating and verifying the response.</p>
+            </div>
+
+        </section>
+
+
+        <!-- Results -->
+
+        <section id="result" class="hidden">
+
+
+            <!-- Draft Answer -->
+
+            <div class="card">
+
+                <div class="section-heading">
+
+                    <h2>Draft Answer</h2>
+
+
+                </div>
+
+                <div id="draft" class="answer"></div>
+
+            </div>
+
+
+            <!-- Verification -->
+
+            <div class="card">
+
+                <div class="section-heading">
+
+                    <h2>Self-Check Verification</h2>
+
+                   
+
+                </div>
+
+                <div id="checks"></div>
+
+            </div>
+
+
+            <!-- Final Answer -->
+
+            <div class="card final">
+
+                <div class="section-heading">
+
+                    <h2>Verified Answer</h2>
+
+                    <span id="resultBadge" class="result-badge"></span>
+
+                </div>
+
+                <div id="final" class="answer final-answer"></div>
+
+                <div id="status"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
