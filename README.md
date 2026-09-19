@@ -197,21 +197,7 @@ policyguard/
 
 ---
 
-## 7. Technology
-
-- Python
-- FastAPI
-- Pydantic
-- HTML
-- CSS
-- JavaScript
-- OpenAI-compatible API
-- OpenRouter
-- LLM-based claim verification
-
----
-
-## 8. Setup
+## 7. Setup
 
 ### Clone the Repository
 
@@ -250,7 +236,7 @@ The repository contains `.env.example` as a safe configuration template.
 
 ---
 
-## 9. Run the Application
+## 8. Run the Application
 
 From the project root:
 
@@ -266,7 +252,7 @@ http://127.0.0.1:8000
 
 ---
 
-## 10. Testing
+## 9. Testing
 
 The system was tested using six manually designed cases covering:
 
@@ -286,13 +272,13 @@ The system was tested using six manually designed cases covering:
 | 3 | Business-class reimbursement | Verify a policy restriction | PASSED |
 | 4 | Meal allowance + receipt | Verify multiple factual claims | PASSED |
 | 5 | Hotel limit with failure injection | Catch a confident-wrong claim | CORRECTED |
-| 6 | Taxi reimbursement | Check that unsupported information is not invented | UPDATE WITH ACTUAL RESULT |
+| 6 | Taxi reimbursement | Check that unsupported information is not invented | The policy does not specify a maximum taxi reimbursement. |
 
 > **Note:** Update Test 6 with the actual result observed during the final test run. Do not claim `FLAGGED` unless the application actually returned that result.
 
 ---
 
-## 11. Failure Handling
+## 10. Failure Handling
 
 PolicyGuard handles three verification outcomes.
 
@@ -337,7 +323,7 @@ Flag when it cannot be safely corrected
 
 ---
 
-## 12. Development Failure
+## 11. Development Failure
 
 During development, the verification model sometimes returned valid JSON for supported claims but omitted the `correction` field.
 
@@ -356,7 +342,7 @@ This made the loop more tolerant of imperfect model output.
 
 ---
 
-## 13. Limitations
+## 12. Limitations
 
 PolicyGuard is intentionally small and has some limitations:
 
@@ -369,7 +355,7 @@ PolicyGuard is intentionally small and has some limitations:
 
 ---
 
-## 14. Possible Improvements
+## 13. Possible Improvements
 
 If the prototype were extended further, possible improvements include:
 
@@ -381,19 +367,5 @@ If the prototype were extended further, possible improvements include:
 - Audit logging
 - Confidence thresholds
 - Human review for unresolved claims
-
----
-
-## 15. Walkthrough
-
-The accompanying walkthrough demonstrates:
-
-1. Asking a normal policy question
-2. Generating the initial draft
-3. Verifying the generated claim against the source policy
-4. Running the controlled confident-wrong demonstration
-5. Detecting the incorrect claim
-6. Showing the policy evidence and correction
-7. Returning the verified answer
 
 The complete source code and setup instructions are available in this repository.
